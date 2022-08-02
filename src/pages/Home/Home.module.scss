@@ -1,0 +1,34 @@
+@import "../../utils/styles/mixins.scss";
+
+.main_content {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+
+  @include m-p(0, 0);
+
+  .main_info {
+    box-sizing: border-box;
+    padding: 2em;
+
+    .button {
+      background: #d56488;
+      border-color: #d56488;
+    }
+    .button:hover {
+      background: white;
+      color: #d56488;
+    }
+  }
+
+  .home_img {
+    @include dFlex(inline-block, center, center);
+    height: calc(100vh - 76px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    padding: 0;
+  }
+}

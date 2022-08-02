@@ -1,0 +1,172 @@
+@import "../../utils/styles/mixins.scss";
+
+.messages_output {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 80vh;
+  border: 1px solid lightgrey;
+  border-radius: 1.5rem;
+  overflow-y: scroll;
+}
+
+.info_alert {
+  @include dFlex(flex, center, center);
+  background-color: #bbd0ff;
+  padding: 1rem;
+  font-size: 1em;
+  font-weight: 500;
+
+  .info_text {
+    color: #9b5de5;
+    padding: 0 0.2em;
+  }
+
+  .conversation_img {
+    @include hw(60px, 60px);
+    object-fit: cover;
+    margin: 10px auto;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+}
+
+.alert_date_indicator {
+  @include dFlex(flex, center, center);
+  font-weight: 500;
+
+  .date {
+    @include dFlex(flex, center, center);
+    width: 20%;
+    box-shadow: 5px 5px 5px #b8c0ff;
+    border-radius: 30px;
+    margin: 1em 0;
+  }
+}
+
+.message {
+  padding: 0 10px;
+  display: flex;
+  justify-content: flex-end;
+
+  .message_inner {
+    margin-bottom: 1em;
+    padding: 1em;
+    min-width: 200px;
+    max-width: 90%;
+    text-align: right;
+    min-height: 80px;
+    font: 400 1em, sans-serif;
+    display: inline-block;
+    background-color: #4361ee;
+    border-end-end-radius: 20px;
+    border-end-start-radius: 20px;
+    border-start-start-radius: 20px;
+
+    p {
+      color: white;
+    }
+  }
+
+  .container_message {
+    @include dFlex(flex, center, flex-end);
+    margin-bottom: 3px;
+
+    .message_sender {
+      margin-bottom: 5px;
+      font-weight: bold;
+      padding-left: 0.5em;
+    }
+
+    img {
+      border: 1px solid white;
+    }
+
+    p {
+      color: white;
+    }
+  }
+}
+
+.incoming_message {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 20px;
+  padding: 0 10px;
+
+  .message_inner {
+    margin-bottom: 1em;
+    padding: 1em;
+    min-width: 200px;
+    max-width: 90%;
+    text-align: right;
+    min-height: 80px;
+    font: 400 1em, sans-serif;
+    display: inline-block;
+    background-color: #4361ee;
+    border-end-end-radius: 20px;
+    border-end-start-radius: 20px;
+    border-start-end-radius: 20px;
+
+    p {
+      color: #4361ee;
+    }
+  }
+
+  .container_message {
+    @include dFlex(flex, center, flex-start);
+    margin-bottom: 3px;
+
+    .message_sender {
+      margin-bottom: 5px;
+      font-weight: bold;
+      padding-left: 0.5em;
+    }
+
+    img {
+      border: 1px solid #4361ee;
+    }
+
+    p {
+      color: #4361ee;
+    }
+  }
+}
+
+.emoji_content {
+  border: 1px solid #4361ee;
+  padding: 10px;
+  border-radius: 10px;
+  @include dFlex(flex, center, center);
+  position: relative;
+  cursor: pointer;
+
+  .emoji {
+    z-index: 100;
+    position: absolute;
+    bottom: 50px;
+    right: -1px;
+  }
+}
+
+.container_private_member_msg {
+  @include dFlex(flex, center, center);
+}
+
+.incoming_message .message_inner {
+  border: 2px solid #4361ee;
+  background: none;
+}
+
+.image {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10;
+}
+
+.message_timestamp_left {
+  font-size: 0.85em;
+  font-weight: 300;
+  margin-top: 10px;
+}

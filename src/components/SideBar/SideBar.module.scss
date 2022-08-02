@@ -1,0 +1,19 @@
+@import "../../utils/styles/mixins.scss";
+
+.mainText {
+  padding-top: 1rem;
+}
+
+.member_items {
+  .member_status {
+    margin-bottom: 0;
+    position: relative;
+
+    .status_img {
+      @include hw(30px, 30px);
+      border-radius: 50%;
+      border: 1px solid purple;
+      object-fit: cover;
+    }
+  }
+}

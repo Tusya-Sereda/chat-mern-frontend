@@ -1,0 +1,15 @@
+@mixin hw($h, $w) {
+  height: $h;
+  width: $w;
+}
+
+@mixin dFlex($d, $ai, $jc) {
+  display: $d;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin m-p($m, $p) {
+  margin: $m;
+  padding: $p;
+}

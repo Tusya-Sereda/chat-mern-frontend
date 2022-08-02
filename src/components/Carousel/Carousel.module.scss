@@ -1,0 +1,9 @@
+@import "../utils/styles/mixins.scss";
+
+.image {
+  @include dFlex(inline-block, center, center);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}

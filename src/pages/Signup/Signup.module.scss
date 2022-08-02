@@ -1,0 +1,70 @@
+@import "../../utils/styles/mixins.scss";
+
+.container {
+  @include hw(100%, 100%);
+  @include m-p(0, 0);
+
+  .row {
+    @include hw(calc(100vh - 76px), 100vw);
+    @include m-p(0, 0);
+
+    background-image: url(https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+
+    .form_login {
+      @include dFlex(flex, center, center);
+      height: 100%;
+      flex-direction: column;
+
+      .form {
+        background-color: aliceblue;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: inset 0 0 0 3000px rgba(150, 150, 150, 0.192);
+        backdrop-filter: blur(10px);
+
+        .paragraph {
+          font-size: 2rem;
+          @include dFlex(flex, center, center);
+        }
+
+        .signup_profile {
+          @include dFlex(flex, center, center);
+          position: relative;
+
+          .img {
+            @include hw(70px, 70px);
+            object-fit: cover;
+            border-radius: 40px;
+            border: 2px solid rgb(76, 76, 236);
+          }
+
+          .image_label {
+            position: absolute;
+            bottom: 0;
+            color: white;
+            cursor: pointer;
+            right: 7.5rem;
+            z-index: 5;
+          }
+        }
+
+        .info {
+          margin-top: 1rem;
+
+          .text {
+            text-align: center;
+
+            .link {
+              text-decoration: none;
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
